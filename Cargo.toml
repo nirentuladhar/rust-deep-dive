@@ -1,0 +1,16 @@
+[workspace]
+resolver = "3"
+# Add each project here when you reach it.
+members = ["week01-grid-stats"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+# Shared lint settings. Each crate opts in with `[lints] workspace = true`.
+[workspace.lints.clippy]
+# No unwrap()/expect() outside tests. If you're sure one can't fail, mark it with
+# #[expect(clippy::unwrap_used, reason = "why it can't fail")]
+unwrap_used = "warn"
+expect_used = "warn"
